@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- 전광판 느낌 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Title</title>
+</head>
+
+<body>
+    <div id="game-wrapper">
+        <h1>☠️ 떨어지면 죽음뿐 ☠️</h1>
+
+        <div id="intro-text">
+            <p>사물이 바닥에 닿지 않게 클릭 버튼을 계속 눌러서 위로 올려 보세요.</p>
+            <p class="highlight-intro">
+                현재 <strong>1등 기록을 깨보세요! (3분 / 180초)</strong>
+            </p>
+        </div>
+
+        <!-- 상단 정보 패널 (라벨 + 박스) -->
+        <div id="info-panel">
+            <div class="info-block">
+                <div class="info-label">Timer</div>
+                <div class="info-value-box">
+                    <span id="timer">00:00</span>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <div class="info-label">Click Count</div>
+                <div class="info-value-box">
+                    <span id="click-count">0</span>
+                </div>
+            </div>
+
+            <div class="info-block" id="best-score">
+                <div class="info-label">1등 스코어</div>
+                <div class="info-value-box best">
+                    <span id="best-score-text">3분(180초)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 게임 영역 -->
+        <div id="game-area" class="bg-safe">
+            <!-- 이모지 말풍선들이 지나가는 레이어 -->
+            <div id="helper-container"></div>
+
+            <!-- 떨어지는 공 -->
+            <div id="object"></div>
+            <div id="floor"></div>
+
+            <!-- GOOD! 뜨는 중앙 메시지 -->
+            <div id="good-message">GOOD!</div>
+
+            <!-- 1등 기록 돌파 메시지 (네모박스 안 중앙) -->
+            <div id="record-break-message">1등 기록 돌파! 🎉</div>
+
+            <!-- GAME OVER + 기록 메시지 (네모박스 안 중앙) -->
+            <div id="gameover-message"></div>
+
+            <!-- 네모 박스 안 전광판 -->
+            <div id="area-message">
+                <div id="area-marquee">
+                    ✨ 화이팅! 잘 버티고 있어요! ✨ 계속 클릭 클릭! 당신은 이미 전설의 클릭러… ✨
+                </div>
+            </div>
+        </div>
+
+        <!-- 네모박스 밑 전광판 스타일 상태창 -->
+        <div id="status-panel">
+            <span id="status-text"></span>
+        </div>
+
+        <!-- 기록 메시지 (텍스트) -->
+        <div id="record-message"></div>
+
+        <!-- 버튼 영역 -->
+        <div id="button-row">
+            <!-- 가운데 동그란 UP 버튼 -->
+            <button id="click-button" disabled>UP</button>
+
+            <!-- 오른쪽 세로 버튼 묶음 -->
+            <div id="side-buttons">
+                <button id="start-button">게임 시작</button>
+                <button id="restart-button" class="hidden">다시 하기</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
