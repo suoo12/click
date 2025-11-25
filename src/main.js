@@ -1,3 +1,5 @@
+ClickBattle.init("jiso");
+
 document.addEventListener("DOMContentLoaded", () => {
     const startButton = document.getElementById("start-button");
     const clickButton = document.getElementById("click-button");
@@ -374,7 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
         velocity -= jumpImpulse;
         clickCount++;
         clickCountEl.textContent = clickCount;
-
+        ClickBattle.recordClick();
         objectEl.style.transform = "translateX(-50%) translateY(-3px)";
         setTimeout(() => {
             objectEl.style.transform = "translateX(-50%)";
