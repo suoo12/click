@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { passive: false }
     );
 
-    const BEST_RECORD_SECONDS = 180;
-    const BEST_SCORE_LABEL = "3분(180초)";
+    const BEST_RECORD_SECONDS = 153;
+    const BEST_SCORE_LABEL = "2분 33초";
 
     const SKINS = [
         "object-skin-1",
