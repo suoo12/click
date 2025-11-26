@@ -376,7 +376,7 @@ document.addEventListener("DOMContentLoaded", () => {
         velocity -= jumpImpulse;
         clickCount++;
         clickCountEl.textContent = clickCount;
-        ClickBattle.recordClick();
+
         objectEl.style.transform = "translateX(-50%) translateY(-3px)";
         setTimeout(() => {
             objectEl.style.transform = "translateX(-50%)";
@@ -395,6 +395,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clickButton.addEventListener("click", handleClick);
 
     restartButton.addEventListener("click", () => {
+
         resetGame();
         startGameRunning();
     });
