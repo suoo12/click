@@ -1,4 +1,4 @@
-ClickBattle.init("jiso");
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const startButton = document.getElementById("start-button");
